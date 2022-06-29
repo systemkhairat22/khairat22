@@ -35,15 +35,15 @@ public class memberDAO {
 			
 			//3. create statement
 			ps = con.prepareStatement("INSERT INTO member(mem_icnum,mem_name,mem_age,mem_gender,mem_address,mem_email,mem_phonenum,representative_name,representative_icnum");
-			ps.setString(1, icnum);
-			ps.setString(2, name);
-			ps.setInt(3, age);
-			ps.setString(4, gender);
-			ps.setString(5, address);
-			ps.setString(6, email);
-			ps.setString(7, phoneNum);
-			ps.setString(8, repName);
-			ps.setString(9, repIcnum);
+			ps.setString(2, icnum);
+			ps.setString(3, name);
+			ps.setInt(4, age);
+			ps.setString(5, gender);
+			ps.setString(6, address);
+			ps.setString(7, email);
+			ps.setString(8, phoneNum);
+			ps.setString(9, repName);
+			ps.setString(10, repIcnum);
 			
 			//4.execute query
 			ps.executeUpdate();

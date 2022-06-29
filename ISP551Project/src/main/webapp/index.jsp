@@ -8,5 +8,6 @@
 </head>
 <body>
 	<h1>Hello World</h1>
+	<a href="createMember.jsp">Create Member</a><br><br>
 </body>
 </html>
