@@ -4,17 +4,12 @@ import java.sql.*;
 
 public class ConnectionManager {
 
-    // Database details
-        //String username = "postgres";
-        //String password = "system";
-        //String dbUrl = "jdbc:postgresql://localhost:5432/khairatserver";
-
         private ConnectionManager() {
 
         }
 
         // Connection reference
-        private static Connection connection = getConnection();
+        private Connection connection = getConnection();
 
         // Static reference (Because Connection is static)
         private static ConnectionManager instance = null;
@@ -28,17 +23,29 @@ public class ConnectionManager {
         }
 
         // Get Connection method
-        public static  Connection getConnection() {
+        public Connection getConnection() {
 
             try {
-                Class.forName("org.postgresql.Driver");
-                connection =  DriverManager.getConnection("jdbc:postgresql://localhost:5432/khairatserver", "postgres", "system");
-
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            } catch (SQLException e) {
-                    e.printStackTrace();
+            	Class.forName("org.postgresql.Driver").newInstance();
+            } catch(InstantiationException e) {
+            	e.printStackTrace();
+            } catch(IllegalAccessException e) {
+            	e.printStackTrace();
+            } catch(ClassNotFoundException e) {
+            	e.printStackTrace();
             }
+            
+         // Database details
+            String username = "ztvgrujcixsulcpostgres";
+            String password = "3506512e44dbaa9ecece046f0c61e6390f63715df57a707b69b80058cc080ffc";
+            String dbUrl = "jdbc:postgresql://ec2-34-225-159-178.compute-1.amazonaws.com:5432/da3u9rm7mvf84k";
+            
+            try {
+            	return DriverManager.getConnection(dbUrl, username, password);
+            } catch (SQLException e) {
+            	e.printStackTrace();
+            }
+            
 
             return connection;
         }

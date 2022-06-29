@@ -24,6 +24,25 @@ public class member {
 		representative_name = null;
 		representative_icnum = null;
 	}
+	
+	
+	
+	public member(String mem_icnum, String mem_name, int mem_age, String mem_gender, String mem_address,
+			String mem_email, String mem_phonenum, String representative_name, String representative_icnum) {
+		
+		this.mem_icnum = mem_icnum;
+		this.mem_name = mem_name;
+		this.mem_age = mem_age;
+		this.mem_gender = mem_gender;
+		this.mem_address = mem_address;
+		this.mem_email = mem_email;
+		this.mem_phonenum = mem_phonenum;
+		this.representative_name = representative_name;
+		this.representative_icnum = representative_icnum;
+	}
+
+
+
 	public int getMemberid() {return memberid;}
 	public void setMemberid(int memberid) {this.memberid = memberid;}
 	public String getMem_icnum() {return mem_icnum;}

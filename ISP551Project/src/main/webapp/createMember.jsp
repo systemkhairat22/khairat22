@@ -26,7 +26,7 @@
 		Representative Name:
 		<input type="text" name="rep_name"><br>
 		Representative IC Number:
-		<input type="text" name="rep_name"><br>
+		<input type="text" name="rep_icnum"><br>
 		<input type="submit" value="Submit">
 		<input type="reset" value="Reset">
 	</form>
