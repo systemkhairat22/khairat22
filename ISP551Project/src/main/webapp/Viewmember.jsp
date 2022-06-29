@@ -1,16 +1,19 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Create Member</title>
+<meta charset="ISO-8859-1">
+<title>View Member</title>
+</head>
 
-<meta charset="utf-8">
+
+    <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="main.css">
 </head>
+
 <style>
 
 body{
@@ -90,7 +93,7 @@ a:hover, a:active {
         
            <!-- TOPBAR -->      
         <div style=" background-color: #043a9f; height:100px; color:blue; padding-left:60px; ">
-            <h1 style="text-align: center; color: rgb(2, 2, 2);">REGISTRATION MEMBER</h1>
+            <h1 style="text-align: center; color: rgb(2, 2, 2);">View Member</h1>
         </div>
 <body>
 
@@ -158,14 +161,15 @@ a:hover, a:active {
                 
                 
                  <!-- </div> --> 
-            <input  type="submit" value= "submit" class="btn btn-outline-primary">
-            <input type="reset"  value = "reset" class="btn btn-outline-primary">
+            <input  type="submit" value= "Update" class="btn btn-outline-success">
+            <input type="reset"  value = "Delete" class="btn btn-outline-danger">
          
             </form>
-              
+      
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+        <script src="main.js"></script>
         
-         
-            
-	
+
 </body>
 </html>

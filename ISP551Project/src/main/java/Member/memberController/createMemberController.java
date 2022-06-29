@@ -52,7 +52,7 @@ public class createMemberController extends HttpServlet {
 		
 		dao.createMember(newMember);// invoke method createMember() in MemberDAO
 		
-		RequestDispatcher view = request.getRequestDispatcher("index.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("Viewmember.jsp");
 		view.forward(request,response);
 	}
 

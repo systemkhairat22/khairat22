@@ -2,6 +2,7 @@ package databaseConnection;
 
 import java.sql.*;
 
+//Dao class fOR CRUD database
 public class ConnectionManager {
 
         private ConnectionManager() {

@@ -17,7 +17,7 @@ public class memberDAO {
 	private int id,age;
 	private String icnum,name,gender,address,email,phoneNum,repName,repIcnum;
 	
-	//create member
+	//create member---------------------------
 	public void createMember(member bean) {
 
 		try {
@@ -36,13 +36,16 @@ public class memberDAO {
 			System.out.println(icnum);
 			System.out.println(name);
 			System.out.println(age);
+			System.out.println(gender);
+			System.out.println(address);
+			System.out.println(email);
 			
 			//call getConnection() method
 			con = ConnectionManager.getInstance().getConnection();
 			
 			if (con != null)
 				System.out.println("Connection OK");
-			
+			//create-------------------------------------------
 			//3. create statement
 			ps = con.prepareStatement(
 			"INSERT INTO member(mem_icnum, mem_name, mem_age, mem_gender, mem_address, mem_email, mem_phonenum, representative_name, representative_icnum) "
@@ -70,7 +73,7 @@ public class memberDAO {
 		}
 	}
 	
-	//get member by id
+	//get member by id----------------------------------------
 	public static member getMemberById(int id) {
 		member m = new member();
 		try {
@@ -102,7 +105,9 @@ public class memberDAO {
 			}
 			return m;
 	}
-	//delete member
+	
+	
+	//delete member--------------------------------------------------
 	public void deleteMember(int id) {
 		try {
 			//call getConnection() method
@@ -121,7 +126,7 @@ public class memberDAO {
 			e.printStackTrace();
 		}
 	}
-	//update member
+	//update member-------------------------------------------
 	public void updateMember(member bean) {
 		icnum = bean.getMem_icnum();
 		name = bean.getMem_name();
@@ -139,6 +144,7 @@ public class memberDAO {
 			
 			//3. create statement
 			ps = con.prepareStatement("UPDATE member SET mem_icnum=?,mem_name=?,mem_age=?,mem_gender=?,mem_address=?,mem_email=?,mem_phonenum=?,representative_name=?,representative_icnum=?,WHERE id=?");
+		
 			ps.setString(1, icnum);
 			ps.setString(2, name);
 			ps.setInt(3, age);
