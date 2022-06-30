@@ -7,7 +7,7 @@
 <title>HOME PAGE</title>
 </head>
 <body>
-	<h1>Hello World Hllo worl</h1>
+	<h1>HOME PAGE KHAIRAT SYSTEM</h1>
 	<a href="createMember.jsp">Create Member</a><br><br>
 </body>
 </html>

@@ -76,15 +76,15 @@ public class memberDAO {
 	}
 	
 	//get member by id----------------------------------------
-	public static member getMemberById(int id) {
+	public static member getMemberById(int memberid) {
 		member m = new member();
 		try {
 			// call getconnection() method
 			Connection con = ConnectionManager.getInstance().getConnection();
 			
 			//create statement
-			ps = con.prepareStatement("SELECT * FROM member WHERE id=?");
-			ps.setInt(1, id);
+			ps = con.prepareStatement("SELECT * FROM member WHERE memberid=?");
+			ps.setInt(1, memberid);
 			
 			//execute query
 			//4. execute query
@@ -110,14 +110,14 @@ public class memberDAO {
 	
 	
 	//delete member--------------------------------------------------
-	public void deleteMember(int id) {
+	public void deleteMember(int memberid) {
 		try {
 			//call getConnection() method
 			con = ConnectionManager.getInstance().getConnection();
 			
 			// create statement
-			ps = con.prepareStatement("DELETE FROM member WHERE id=?");
-			ps.setInt(1, id);
+			ps = con.prepareStatement("DELETE FROM member WHERE memberid=?");
+			ps.setInt(1, memberid);
 			
 			//execute query
 			ps.executeUpdate();

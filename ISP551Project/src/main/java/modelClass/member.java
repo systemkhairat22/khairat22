@@ -13,16 +13,16 @@ public class member {
 	private String representative_icnum;
 	
 	public member() {
-		memberid = 0;
-		mem_icnum = null;
-		mem_name = null;
-		mem_age = 0;
-		mem_gender = null;
-		mem_address = null;
-		mem_email = null;
-		mem_phonenum = null;
-		representative_name = null;
-		representative_icnum = null;
+		this.memberid = 0;
+		this.mem_icnum = null;
+		this.mem_name = null;
+		this.mem_age = 0;
+		this.mem_gender = null;
+		this.mem_address = null;
+		this.mem_email = null;
+		this.mem_phonenum = null;
+		this.representative_name = null;
+		this.representative_icnum = null;
 	}
 	
 	
