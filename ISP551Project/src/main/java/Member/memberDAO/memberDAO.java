@@ -1,17 +1,18 @@
 package Member.memberDAO;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
 import modelClass.member;
 import databaseConnection.ConnectionManager;
-
+//This DAO class provides CRUD database operations for member in database
 public class memberDAO {
-	static Connection con = null;
+	Connection con = null;
 	static PreparedStatement ps = null;
-	//static Statement stmt = null;
+	static Statement stmt = null;
 	static ResultSet rs = null;
 	
 	private int id,age;
@@ -38,16 +39,16 @@ public class memberDAO {
 			System.out.println(age);
 			System.out.println(gender);
 			System.out.println(address);
-			System.out.println(email);
+			System.out.println(email); 
 			
 			//call getConnection() method
 			con = ConnectionManager.getInstance().getConnection();
 			
-			if (con != null)
+		if (con != null)
 				System.out.println("Connection OK");
 			//create-------------------------------------------
 			//3. create statement
-			ps = con.prepareStatement(
+			ps = con.prepareStatement (
 			"INSERT INTO member(mem_icnum, mem_name, mem_age, mem_gender, mem_address, mem_email, mem_phonenum, representative_name, representative_icnum) "
 			+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);");
 			ps.setString(1, icnum);
@@ -60,13 +61,14 @@ public class memberDAO {
 			ps.setString(7, phoneNum);
 			ps.setString(8, repName);
 			ps.setString(9, repIcnum);
+		
 			
 			//4.execute query
 			ps.executeUpdate();
 			System.out.println("Successfull create");
 			
 			//5. close connection
-			//con.close();
+			con.close();
 			
 		}catch(Exception e) {
 			e.printStackTrace();

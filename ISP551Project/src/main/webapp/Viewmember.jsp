@@ -153,9 +153,7 @@ a:hover, a:active {
                         <th><input type="password"  name="mem_password"></th>
                     </tr>
                     <tr>
-                        <th><label for="memPwd2">Confirm Password</label></th>
-                        <th><input type="password"name="mem_password"></th>
-                    </tr>
+                   
                 </tbody>    
                 </table>
                 
